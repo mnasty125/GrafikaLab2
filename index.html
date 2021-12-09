@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Lab-2</title>
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body onload="draw_grid(); draw();">
+    <main class="main">
+      <div class="main__buttons">
+        <div class="main__title"><strong>Управление графиком</strong></div>
+        <div class="main__btns">
+          <div class="main__x">
+            <p>Сдвиг по OX:</p>
+            <input id="X" type="range" min="-400" max="400" value="0" oninput="fun3()" />
+            <p id="text_slideX"> 0 </p>
+          </div>
+          <div class="main__y">
+            <p>Сдвиг по OY:</p>
+            <input id="Y" type="range" min="-400" max="400" value="0" oninput="fun4()"/>
+            <p id="text_slideY"> 0 </p>
+          </div>
+          <div class="main__size">
+            <p>Масштаб:</p>
+            <input
+              id="SIZE"
+              type="range"
+              min="5"
+              max="20"
+              value="0"
+              oninput="fun2()"
+            />
+            <p id="text_size"> 100 </p> 
+          </div>
+          <div class="main__rotate">
+            <p>Поворот:</p>
+            <input
+              id="ROTATE"
+              type="range"
+              min="0"
+              max="100"
+              step="1"
+              value="0"
+              oninput="fun1()"
+            />
+            <p id="text_rotate">0 </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="main__canvas">
+        <canvas id="canvas" width="600" height="600">
+          Ваш браузер не поддерживает canvas
+        </canvas>
+        <canvas id="grid" width="600" height="600"></canvas>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+.main {
+    margin-left: 100px;
+    display: flex;
+}
+.main__buttons {
+    margin-top: 5%;
+    margin-right: 7%;
+}
+.main__canvas {
+    outline: 2px solid grey;
+    position: relative;
+}
+#canvas{
+    position: absolute;
+}
